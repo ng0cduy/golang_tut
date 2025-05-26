@@ -8,6 +8,10 @@ type authenticationInfo struct {
 }
 
 // ?
+func (authInfo authenticationInfo) getBasicAuth() string{
+	return "Authorization: Basic " + authInfo.username+ ":" + authInfo.password
+	// Authorization: Basic Google:12345
+}
 
 // don't touch below this line
 
